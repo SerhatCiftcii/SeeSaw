@@ -1,3 +1,7 @@
+Proje Canlıdaki Link.
+https://serhatciftcii.github.io/SeeSaw/
+
+
 Tahterevalli Simülasyonu:
 
 Bu proje, JavaScript, HTML ve CSS kullanarak  fizik prensibine dayalı tahterevalli (seesaw) simülasyonudur. Amacı, eklenen ağırlıkların tork etkisine göre tahterevallinin eğimini (açısını) hesaplamak ve görselleştirmektir.
