@@ -59,3 +59,19 @@ function updateView() {
   console.log(`Target Angle: ${targetAngle}`);  //TEST ETMEK İÇİN CONSOLE LOG app.js:86 Target Angle: -30 gelen değer 
 
 }
+
+function animate() { // tahterevalliyi animasyonla döndürme
+  // açıya göre geçiş titltSpeed
+  if (currentAngle !== targetAngle) {
+    currentAngle = currentAngle + (targetAngle - currentAngle) * tiltSpeed;
+  }
+  // tahterevalliyi  yeni açıyla döndürmeyi burda sağlıycaz.
+  seesaw.style.transform = `translateX(-50%) rotate(${currentAngle}deg)`;
+
+  objects.forEach(obj => {
+
+    obj.element.style.transform = `translate(-50%, -50%) rotate(${-currentAngle}deg)`;
+  });
+  requestAnimationFrame(animate);
+}
+animate();
