@@ -54,3 +54,20 @@ body {
 
 }
 
+.weight {   
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: #2e0236;
+  border-radius: 50%;
+  color: white;
+  font-size: 14px;  /* şimdlik aynı ağırlıktakiler aynı fontda ilerde değiştiricem. */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translate(-50%, -50%); /* merkezleme burda yapılıcak düşen toplar için  */
+
+}
+
+
+
