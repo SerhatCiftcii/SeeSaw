@@ -4,6 +4,9 @@ const rightWeight = document.getElementById('rightWeight');
 const leftCount = document.getElementById('leftCount')
 const rightCount = document.getElementById('rightCount')
 const resetButton = document.getElementById('resetBtn');
+
+const targetAngleDisplay = document.getElementById('targetAngleDisplay'); // Son açı değerimizi görmek için info panele eklediğim kısım.
+
 const seesawLength = 400;  //tascde istenilen uzunluk 400'dü
 const maxAngle = 30;  // tascde istenilen açı angle değerinde içine yazcam.
 const tiltSpeed = 0.1;  //// anamiasyın hızını şuanlık 0.1 yaptim ama değistirebilirim**: **kendime not
@@ -58,6 +61,8 @@ function updateView() {
  leftCount.textContent = objects.filter(o => o.offsetX < 0).length;
  rightCount.textContent = objects.filter(o => o.offsetX >= 0).length;
 
+ targetAngleDisplay.textContent = targetAngle.toFixed(2);
+
   console.log(`Target Angle: ${targetAngle}`);  //TEST ETMEK İÇİN CONSOLE LOG app.js:86 Target Angle: -30 gelen değer 
 
 }
@@ -95,6 +100,6 @@ resetButton.addEventListener('click', () => {
  targetAngle = currentAngle = 0; 
  seesaw.style.transform = `translateX(-50%) rotate(0deg)`; // tahterevalliyi DÜZELTME Fonksiyonu. 
  saveState();  //local stroge temizleme:
-
+updateView()
 });
 animate();
