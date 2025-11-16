@@ -80,7 +80,7 @@ function animate() { // tahterevalliyi animasyonla döndürme
   });
   requestAnimationFrame(animate);
 }
-animate();
+
 
 //localstorage  kaydedeilmiş ağırlıkları ekleme.
 if (localStorage.getItem('sawState')) {
@@ -88,3 +88,13 @@ if (localStorage.getItem('sawState')) {
  objects.forEach(obj => addWeightElement(obj)); 
  updateView(); // Görünümü güncelle
 }
+
+resetButton.addEventListener('click', () => {
+ objects.forEach(o => o.element.remove()); 
+ objects = [];
+ targetAngle = currentAngle = 0; 
+ seesaw.style.transform = `translateX(-50%) rotate(0deg)`; // tahterevalliyi DÜZELTME Fonksiyonu. 
+ saveState();  //local stroge temizleme:
+
+});
+animate();
