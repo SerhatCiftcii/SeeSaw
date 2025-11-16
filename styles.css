@@ -1,0 +1,55 @@
+body {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f0f0f0;
+  margin: 0;
+  font-family: Arial, sans-serif;
+
+}
+
+
+
+#container {
+
+  position: relative;
+  width: 600px;
+  height: 400px;
+
+}
+
+
+
+#seesaw {
+
+  position: absolute;
+  bottom: 150px;
+  left: 50%;
+  width: 400px;
+  height: 20px;
+  background: #8b4513;
+  border-radius: 10px;
+  transform-origin: center center;
+  transform: translateX(-50%);
+  cursor: pointer;
+  z-index: 1;
+
+}
+
+
+
+#pivot {
+
+  position: absolute;
+  bottom: 140px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  background: #555;
+  border-radius: 50%;
+  z-index: 2;
+
+}
