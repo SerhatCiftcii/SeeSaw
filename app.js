@@ -27,6 +27,7 @@ seesaw.addEventListener('click', e => {
    const obj = { weight, offsetX };
   objects.push(obj);
   addWeightElement(obj);
+  saveState();
   updateView();
 
 });
